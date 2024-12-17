@@ -1,0 +1,44 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    color: white;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.header{
+    padding: 15px;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    background-color: rgb(38, 37, 37);
+}
+
+.menu{
+gap: 2rem;
+display: flex;
+list-style: none;
+}
+
+.logo{
+
+    font-weight: bold;
+    font-size: 29px;
+}
+
+.btn-mobile{
+    display: none;
+}
+
+@media (max-width: 650px){
+    .menu{
+        display: none;
+    }
+    .btn-mobile{
+        display: block;
+    }
+}
