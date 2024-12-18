@@ -14,7 +14,7 @@
         <li><a href="./paginas/artista.php">Artista</a></li>
         <li><a href="./paginas/musica.php">Musica</a></li>
         <li><a href="./paginas/album.php">Album</a></li>
-        <li><a href="./paginas/genero.php">Gênero</a></li>    
+        <li><a href="./paginas/genero.php">Gênero</a></li>
     </ul>
     </Nav>
 </header>
