@@ -1,7 +1,7 @@
 -- site_music.album definição
 
 CREATE TABLE `album` (
-  `id_artista` int(11) NOT NULL AUTO_INCREMENT,
+  `id_album` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`id_artista`),
   UNIQUE KEY `nome` (`nome`)
