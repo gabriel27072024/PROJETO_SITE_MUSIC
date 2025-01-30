@@ -5,7 +5,7 @@
 }
 
 label,input{
-    display: block;
+    /*display: block;*/
     line-height: 30px;
     height: 30px;
     outline: none;
@@ -13,16 +13,23 @@ label,input{
     width: 100%;
 }
 
-form{
-    width: 330px;
-    background-color: rgba(0,0,0,.2);
+form {
+width: 350px;
+background-color: rgba(0,0,0,.2);
 padding: 20px;
 margin: 30px auto;
+
 }
 
 input[type = "submit"]{
-    margin-top: 10px;
+    margin-top: 25px;
+    margin-bottom: 10px;
     cursor: pointer;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 #esquerda{

@@ -29,6 +29,23 @@ class artista{
     return $res;
 
     }
+    //Função para cadastrar a artista
+    public function cadastrarartista($nome)
+    {
+        $cmd = $this ->pdo-> prepare("select id from musica where nome = :n ");
+        $cmd->bindValue(":n",  $nome);
+        $cmd->execute();
+        if($cmd-> rowCount()> 0)//musica ja existe
+        {
+            return false;
+        }else //musica não foi encontrada
+        {
+            $cmd = $this->pdo->prepare ("insert into artista (nome) values(:n)");
+            $cmd->bindValue(":n", $nome);
+            $cmd->execute();
+            return true;
+        }
+    }
 
 }
 

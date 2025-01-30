@@ -15,12 +15,13 @@ $p = new artista("site_music", "localhost", "root", "");
 
 <section id = "esquerda">
 
- <form>
+ <form action="./storage.php" method="POST">
     <h2>
     Cadastrar artista</h2>
     <label for="nome">Nome do Artista</label>
     <input type="text" name= "nome" id = "nome">
 
+    <input type="hidden" name="pagina" value="artista">
     <input type="submit" value="Cadastrar Artista">
 </form>
  
