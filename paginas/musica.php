@@ -53,7 +53,8 @@ $musica = "";
             </tr>
             <?php
             $dados = $p->buscardados();
-            if (count($dados) > 0) {4unt($dados); $i++) {
+            if (count($dados) > 0) {
+                for ($i = 0; $i < count($dados); $i++) {
                     echo "<tr>";
                     foreach ($dados[$i] as $k => $v) {
                         if ($k != "id_musica") {
