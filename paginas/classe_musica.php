@@ -15,10 +15,8 @@ class Musica {
     }
 
     public function buscardados() {
-        $res = array();
         $cmd = $this->pdo->query("SELECT * FROM musica ORDER BY musica");
-        $res = $cmd->fetchAll(PDO::FETCH_ASSOC);
-        return $res;
+        return $cmd->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function cadastrarMusica($musica, $artista) {
@@ -40,6 +38,21 @@ class Musica {
     public function excluirMusica($id_musica) {
         $cmd = $this->pdo->prepare("DELETE FROM musica WHERE id_musica = :id_musica");
         $cmd->bindValue(":id_musica", $id_musica);
+        $cmd->execute();
+    }
+
+    public function buscaDadosMusica($id_musica) {
+        $cmd = $this->pdo->prepare("SELECT * FROM musica WHERE id_musica = :id");
+        $cmd->bindValue(":id", $id_musica);
+        $cmd->execute();
+        return $cmd->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function atualizarDados($id_musica, $musica, $artista) {
+        $cmd = $this->pdo->prepare("UPDATE musica SET musica = :m, artista = :a WHERE id_musica = :id");
+        $cmd->bindValue(":m", $musica);
+        $cmd->bindValue(":a", $artista);
+        $cmd->bindValue(":id", $id_musica);
         $cmd->execute();
     }
 }
